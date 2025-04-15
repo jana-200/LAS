@@ -18,7 +18,9 @@ int main(){
     
     fork_and_run0(afficher_enfant);
 
+    // status c'est le code de retour du fils
     int status;
+    // le parent attend jusqu'à la fin de l'enfant + rempli le status
     wait(&status);
 
     szPar=strlen(strParent);

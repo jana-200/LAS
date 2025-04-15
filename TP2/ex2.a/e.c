@@ -19,5 +19,5 @@ int main(){
     exit(0);
 }
 
-//en gros ,write n'utilise pas de buffer, il affiche asimplement
+//en gros ,write n'utilise pas de buffer, il affiche simplement
 //alors que printf utilise un buffer qui se vide si on fait \n

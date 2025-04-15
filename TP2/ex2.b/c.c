@@ -22,6 +22,7 @@ int main(){
     int status;
     wait(&status);
 
+    // pr récupérer le code de retour (ici 3)
     int exit_code = WEXITSTATUS(status);
     printf("exit code is %d\n",exit_code);
 
