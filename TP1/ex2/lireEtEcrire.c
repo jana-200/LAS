@@ -10,6 +10,7 @@
 
 int main(int argc, char *argv[]){
     if(argc!=3) exit(1);
+
     char buffer[BUFFER_SIZE];
     ssize_t size;
 
@@ -25,16 +26,15 @@ int main(int argc, char *argv[]){
 
         if(buffer[size-1]!='\n'){
             printf("chaine trop longue, vous devez avoir maximum 80 caractères \n");
-                char tmp;
-                while (read(0, &tmp, 1)> 0 && tmp != '\n');
-                continue;
+            char tmp;
+            while (read(0, &tmp, 1)> 0 && tmp != '\n');
+            continue;
         }
         if (!isalpha(buffer[0])){
             char tmp;
-                while (read(0, &tmp, 1)> 0 && tmp != '\n');
-                continue;
+            while (read(0, &tmp, 1)> 0 && tmp != '\n');
+            continue;
         }
-
         
         if(isupper(buffer[0])){
             write(file1, buffer, size);
